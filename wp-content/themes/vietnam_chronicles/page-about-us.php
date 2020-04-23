@@ -40,14 +40,15 @@
         <hr>
       </div>
       <h2>Our Journey</h2>
-      <div class="div-block-6"><img src='<?php echo get_template_directory_uri() . "/images/our_journey.JPG" ?>' srcset='<?php echo get_template_directory_uri() . "/images/our_journey-p-500.jpeg" ?> 500w, <?php echo get_template_directory_uri() . "/images/our_journey-p-800.jpeg" ?> 800w, <?php echo get_template_directory_uri() . "/images/our_journey.JPG" ?> 980w"' sizes="100vw" alt="" class="image-12"></div>
+      <div class="about_us_img_container"><img class="about_us_img" src='<?php echo get_template_directory_uri() . "/images/our_journey.JPG" ?>' srcset='<?php echo get_template_directory_uri() . "/images/our_journey-p-500.jpeg" ?> 500w, <?php echo get_template_directory_uri() . "/images/our_journey-p-800.jpeg" ?> 800w, <?php echo get_template_directory_uri() . "/images/our_journey.JPG" ?> 980w"' sizes="100vw" alt="" class="image-12"></div>
       <p class="mds-plr-10">At first, Antonio went to Vietnam to volunteer in the countryside of the north. He really liked his time there, so he stayed for 4 months exploring the countryside, learning about people and teaching English and other useful skills to the community. During that time, he fell in love with Vietnam, so he decided to stay even more and move to Vietnam to live.</p>
       <p class="mds-plr-10">After some time, David &amp; Lovel joined him for an epic motorbike trip across the whole country with the bikes.We experienced many ups and downs on our trip, but all of that made us stronger and better persons. Also, our connection became so much stronger and we decided to share our story with people around the world.</p>
       <p class="mds-plr-10">We started to visit Vietnam and surrounding countries every year, and so far, we traveled around Cambodia and Laos on our beloved motorbikes. Hopefully, in the years to come, we’ll all relocate to Vietnam and explore every single corner of breathtaking country and share it with you.</p>
       <div class="html-embed-5 w-embed">
         <hr>
       </div>
-      <h2>Our Mission</h2><img src='<?php echo get_template_directory_uri() . "/images/our_mission.JPG" ?>' srcset='<?php echo get_template_directory_uri() . "/images/our_mission-p-500.jpeg" ?> 500w, <?php echo get_template_directory_uri() . "/images/our_mission-p-800.jpeg" ?> 800w, <?php echo get_template_directory_uri() . "/images/our_mission.JPG" ?> 982w"' sizes="100vw" alt="" class="image-13">
+      <h2>Our Mission</h2>
+      <div class="about_us_img_container"><img class="about_us_img" src='<?php echo get_template_directory_uri() . "/images/our_mission.JPG" ?>' srcset='<?php echo get_template_directory_uri() . "/images/our_mission-p-500.jpeg" ?> 500w, <?php echo get_template_directory_uri() . "/images/our_mission-p-800.jpeg" ?> 800w, <?php echo get_template_directory_uri() . "/images/our_mission.JPG" ?> 982w"' sizes="100vw" alt="" class="image-13"></div>
       <p class="mds-plr-10">We want to help you with the information when it comes to planning a trip around Vietnam, Laos and Cambodia.</p>
       <p class="mds-plr-10">We will share specific routes that we took during our trip and why we think these routes can provide you with a stunning experience.</p>
       <p class="mds-plr-10">But, it’s not all we want to share!</p>

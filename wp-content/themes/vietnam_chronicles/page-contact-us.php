@@ -44,16 +44,12 @@
             <input type="text" class="text-field-4 w-input" maxlength="256" name="msg_subject" data-name="Name 3" id="name-3">
             <label for="name-4">Message</label>
             <textarea placeholder="Message Text" maxlength="5000" id="msg_content" name="field" required="" class="textarea w-input"></textarea>
-            <div>
+            <div class="form-footer">
             <div class="g-recaptcha" data-sitekey="6LfeHx4UAAAAAAKUx5rO5nfKMtc9-syDTdFLftnm"></div>
-            <div class="div-block-30">
-          
-                <div class="link-btn w-inline-block contact-us-submit" style="opacity: 1;">
-                    <div class="text-button">Send</div>
-                </div>              
+              <a href="#" class="link-btn w-inline-block contact-us-submit" style="opacity: 1;">
+                 <div class="text-button">Send</div>
+              </a>              
             </div>
-            </div>
-            
           </form>
           <div class="success-message-3 w-form-done contact-us-success">
             <div>Thank you! Your message has been received!</div>

@@ -1,5 +1,5 @@
     <?php get_header() ?>
-    <div class="container-main main-section">
+    <div class="container-main main-section page_work_with_us">
     <div class="w-container">
       <div class="part-container">
         <h1>Work With Us</h1>

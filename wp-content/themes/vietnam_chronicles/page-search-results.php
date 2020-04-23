@@ -26,64 +26,11 @@
       <div class="html-embed-5 w-embed">
         <hr>
       </div>
-      <h4 class="search-form-heading" <?php if($_GET["query"] == "") echo "hidden"?>>Search results for: <?php echo $_GET["query"] ?></h4>
+      <h4 class="search-form-heading search_results_heading" <?php if($_GET["query"] == "") echo "hidden"?>>Search results for: <?php echo $_GET["query"] ?></h4>
       <div class="search_result_container">
               
 
       </div>
-      <?php 
-       /* function match_query_p1($post, $query){
-          $match = false;
-          if( stripos( get_the_title( $post ), $query ) !== false ){
-            $match = true;
-          }
-          return $match;
-        }
-
-        /*function match_query_p2($post, $query){
-          $match = false;
-          if( stripos( get_the_content( $post ), $query ) !== false ){
-            $match = true;
-          }
-
-          return $match;
-        }
-
-        $posts = get_posts(array(
-          'numberposts' => -1
-        ));      
-        $query = $_GET["query"];
-        $results = json_decode(file_get_contents("http://localhost/vietnam_chronicles/wp-json/vnc/v1/search-posts?query=" . $query));
-        $i = 0;
-
-        //print_r($results); 
-        //echo gettype($results);
-
-        foreach( $results as $result_id ):
-          $result = get_post( $result_id ); 
-          if( $i == 0 ): ?>
-            <div class="no-mp w-row">
-            <?php
-            elseif ( $i % 3 == 0 ): ?>
-              </div><div class="no-mp w-row">
-            <?php 
-            endif; 
-            $i++;
-            ?>
-          <div class="cetered-vertical w-col w-col-4">
-            <div class="archive-post-card p-10">
-              <img src=<?php echo get_template_directory_uri() . "/images/post-card_dummy_00.jpg" ?> width="300" alt="" class="link-image">
-              <h4 class="link-heading"><?php echo get_the_title($result); ?> </h4>
-              <p><?php echo get_the_excerpt($result)?></p>
-              <p class="link-read-more">Read more &gt;</p>
-          </div>
-        </div>
-        <?php
-          
-        endforeach;
-
-        if( $i > 0 ) echo "</div>";
-     */ ?>
       </div>
      </div>
   <?php get_footer() ?>

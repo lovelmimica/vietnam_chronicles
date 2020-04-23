@@ -1,4 +1,4 @@
-    <div class="section-2">
+    <div class="section-2 footer">
     <div class="container-4 w-container">
       <div class="columns-11 w-row">
         <div class="w-col w-col-6">
@@ -48,7 +48,7 @@
         </div>
       </div>
       <div class="div-block-4">
-        <div class="text-block footer-text">Vietnam Chronicles. All rights reserved 2019</div>
+        <div class="text-block footer-text">Vietnam Chronicles. All rights reserved 2020</div>
         <div class="div-block-3">
           <div class="w-embed">
             <a href="https://www.facebook.com/vietnamchronicles/"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i>&nbsp</a>

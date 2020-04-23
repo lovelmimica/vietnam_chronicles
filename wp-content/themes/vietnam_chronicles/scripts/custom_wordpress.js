@@ -83,20 +83,19 @@ window.onload = function(){
 
     search_results = new Array();
 
-    function present_results(search_results){
-        console.log("Presenting results");
-        console.log(search_results);
+    function present_results(search_results, query){
         jQuery(".search_result_container").empty();
         for(i = 0; i < search_results.length; i++){
             jQuery(".search_result_container").append(`<div class="cetered-vertical w-col w-col-4">
-            <div class="archive-post-card p-10">
+            <div class="archive-post-card p-10 search_result_post_card">
               <img src="http://localhost/vietnam_chronicles/wp-content/themes/vietnam_chronicles/images/post-card_dummy_00.jpg" width="300" alt="" class="link-image">
               <h4 class="link-heading">${search_results[i].title}</h4>
               <p>${search_results[i].excerpt}</p>
               <p class="link-read-more">Read more &gt;</p>
             </div>`);
         }
-    }
+        jQuery(".search_results_heading").text("Search resutlts for: " + query);            
+     }
 
     if(document.title == "» Search Results"){
         urlParams = new this.URLSearchParams(window.location.search);
@@ -106,34 +105,23 @@ window.onload = function(){
             url: "http://localhost/vietnam_chronicles/wp-json/vnc/v1/search-posts?query=" + query,       
         }).done(function(res){
             search_results = res;
-            present_results(search_results);
+            present_results(search_results, query);
         });
     } 
     jQuery('#input_search_query').on('input', function(){
         let query = jQuery(this).val();
         if( query.length >= 3 ) {
-            console.log(query);
 
             jQuery.ajax({
                 url: "http://localhost/vietnam_chronicles/wp-json/vnc/v1/search-posts?query=" + query,       
             }).done(function(res){
                 search_results = res;
-                present_results(search_results);
+                present_results(search_results, query);
             });
         }
     });
 
     if(document.title == "Vietnam Chronicles"){
-        //console.log("Front page loaded");
-
-        //console.log(ig_image_urls);
-
-        //test_array = [1, 2, 3];
-        //console.log(test_array);
-        //test_array.push(test_array.shift());
-        //test_array.unshift(test_array.pop());
-        //console.log(test_array);
-
         jQuery(".main_slider_left").on("click", function(){
             console.log("Main slider goes left");
             //TODO
