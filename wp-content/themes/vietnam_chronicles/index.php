@@ -26,11 +26,6 @@
                 'featured_image' => $post->featured_image
             )
         );
-
-
-        
-        //print_r(get_user_by('email', $post->author));
-
         wp_insert_post( $postarr ); 
 
         echo "<h1>Insertan novi post " . $post->title . "</h1>";

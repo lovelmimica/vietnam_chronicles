@@ -25,32 +25,29 @@
         $i = 0;
         $count = wp_count_posts( "postcard" )->publish;
         ?> 
+        <div class='postcard_grid'>
         <?php while( $loop->have_posts() ): 
           $loop->the_post();
-
-          if( $i == 0): ?>
-          <div class="no-mp w-row">
-          <?php
-          elseif ( $i % 3 == 0): ?>
-            </div><div class="no-mp w-row">
-          <?php 
-          endif; 
-          $i++; 
           ?>  
-          <div class="cetered-vertical w-col w-col-4 postcard-card">
-           <div class="m-10 postcard-container" data-postcard-id='<?php the_ID() ?>'>
-              <img src=<?php echo get_template_directory_uri() . "/images/dummy_1.jpg" ?> srcset='<?php echo get_template_directory_uri() . "/images/dummy_1-p-500.jpeg" ?> 500w, <?php echo get_template_directory_uri() . "/images/dummy_1-p-800.jpeg" ?> 800w, <?php echo get_template_directory_uri() . "/images/dummy_1-p-1080.jpeg" ?> 1080w, <?php echo get_template_directory_uri() . "/images/dummy_1.jpg" ?> 1275w' sizes="(max-width: 479px) 96vw, (max-width: 767px) 29vw, (max-width: 991px) 222.671875px, 293.328125px" alt="" class="image-postcard link-image">
-              <h4 class="link-heading"><?php the_title() ?></h4>
+         
+           <div class="m-10 postcard-container image-postcard postcard-card postcard_animation" data-postcard-id='<?php the_ID() ?>'>
+              <img src=<?php echo get_template_directory_uri() . "/images/dummy_1.jpg" ?> alt="" class="image-postcard link-image">
+              <h4 class="link-heading postcard_heading"><?php the_title() ?></h4>
               <div class="postcard-content" hidden><?php the_content() ?></div>
               <p class="postcard-parts" hidden><?php echo get_post_custom()['postcard_parts'][0]  ?></p>
             </div>
-          </div>
+          
+          <a href=<?php the_permalink() ?> class="m-10 postcard-container image-postcard postcard-card postcard_link">
+           <div class="m-10 postcard-container" data-postcard-id='<?php the_ID() ?>'>
+              <img src=<?php echo get_template_directory_uri() . "/images/dummy_1.jpg" ?>  alt="" class="image-postcard link-image">
+              <h4 class="link-heading postcard_heading"><?php the_title() ?></h4>
+              <div class="postcard-content" hidden><?php the_content() ?></div>
+              <p class="postcard-parts" hidden><?php echo get_post_custom()['postcard_parts'][0]  ?></p>
+            </div>
+        </a>
           <?php
-          //print_r(get_post());
-          endwhile; ?>
-              
-        </div>
-
+          endwhile; ?>              
+      </div>
     </div>
   </div>
   <?php get_footer(); ?>

@@ -1,8 +1,8 @@
     <?php get_header() ?>
     <div class="container-main main-section page_work_with_us">
     <div class="w-container">
+      <h1>Work With Us</h1>
       <div class="part-container">
-        <h1>Work With Us</h1>
         <div class="no-mp w-row">
           <div class="cetered-vertical w-col w-col-6">
             <p class="mds-plr-10">Hey there! We’re Lovel, David and Antonio, a small team of Croatian travel bloggers who have a deep passion about Vietnam and surrounding countries</p>
@@ -13,7 +13,7 @@
               <div class="text-button">Contact Us</div>
             </a>
           </div>
-          <div class="cetered-vertical w-col w-col-6"><img src= <?php echo get_template_directory_uri() . "/images/work-with-us.JPG" ?> width="404" srcset='<?php echo get_template_directory_uri() . "/images/work-with-us-p-500.jpeg 500w" ?>, <?php echo get_template_directory_uri() . "/images/work-with-us-p-800.jpeg" ?> 800w,  <?php echo get_template_directory_uri() . "/images/work-with-us-p-1080.jpeg" ?> 1080w, <?php echo get_template_directory_uri() . "/images/work-with-us-p-1600.jpeg" ?> 1600w, <?php echo get_template_directory_uri() . "/images/work-with-us.JPG" ?> 1822w' sizes="(max-width: 479px) 100vw, (max-width: 767px) 404px, (max-width: 991px) 364px, 404px" alt=""></div>
+          <div class="cetered-vertical w-col w-col-6"><img src="http://localhost/vietnam_chronicles/wp-content/uploads/2020/04/work_with_us.jpg" alt=""></div>
         </div>
         <div class="html-embed-5 mt-20 w-embed">
           <hr>

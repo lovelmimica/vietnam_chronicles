@@ -105,23 +105,10 @@
         $results = array();
         $secondary_results = array();
         $query = $request["query"];
-        /*$posts = get_posts(array(
-            'numberposts' => -1
-          ));
-
-        foreach( $posts as $post ): 
-        if( stripos( get_the_title( $post ), $query ) !== false ):
-                //print_r($post->ID);
-                //echo get_the_title( $post ) . " " . $query . " " . $post->the_ID . "<br>";
-                array_push( $results, $post->ID);
-            endif;
-        endforeach;
-        */
 
         $wp_query = new WP_Query(array(
             'post_type' => 'post',
             'posts_per_page' => -1,
-            's' => $query
         ));
 
         while( $wp_query->have_posts()):
@@ -132,10 +119,17 @@
             $result_item->permalink = get_permalink( $wp_query->get_post() );
             $result_item->title = get_the_title( $wp_query->get_post() );
 
-            if( stripos( get_the_title( $post ), $query ) !== false ): 
+            if( stripos( $result_item->title, $query ) !== false ): 
                 array_push( $results, $result_item);
-            else: 
-                array_push( $secondary_results, $result_item );
+            else:
+                $tags_arr = get_the_tags( $result_item->ID );
+                if($tags_arr){
+                    foreach( $tags_arr as $tag ){
+                        if( stripos( $tag->name, $query ) !== false ) 
+                            array_push($secondary_results, $result_item);
+                            break;
+                    }
+                }
             endif;
         endwhile;
         
@@ -169,8 +163,6 @@
         );
 
         register_rest_route('vnc/v1', '/search-posts', $args);
-
-
     }
 
     add_action('rest_api_init', 'register_routes');

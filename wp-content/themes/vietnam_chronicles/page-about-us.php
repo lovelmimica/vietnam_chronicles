@@ -5,7 +5,7 @@
       <h2>Our Team</h2>
       <div class="part-container">
         <div class="no-mp align-vertical-centre w-row">
-          <div class="pl-10 pl-10 pr-10 w-col w-col-3"><img src='<?php echo get_template_directory_uri() . "/images/antonio.JPG" ?>' srcset='<?php echo get_template_directory_uri() . "/images/antonio-p-500.jpeg" ?> 500w, <?php echo get_template_directory_uri() . "/images/antonio-p-800.jpeg" ?> 800w, <?php echo get_template_directory_uri() . "/images/antonio.JPG" ?> 1768w' sizes="100vw" alt=""></div>
+          <div class="pl-10 pl-10 pr-10 w-col w-col-3"><img src="http://localhost/vietnam_chronicles/wp-content/uploads/2020/04/front_page.Antonio.jpeg" alt="Antonio"></div>
           <div class="pl-10 pr-10 w-col w-col-9">
             <h3 class="align-left">Antonio Gabrić</h3>
             <p>Antonio is a long-term traveler with a deep passion in exploring off-the-beaten-paths around the world. Currently, he’s living in Da Nang city and when he’s not busy pushing the new content, he enjoys taking his motorbike around Vietnam or Laos. Some of the most remarkable experiences were teaching English in a remote village located in central Laos countryside, Nakai town. Or, living in a rural Nghe An Province while helping a local community with their English. Or, driving with the worst ‘Honda’ Win around the country experiencing daily breakdowns. Or, just read a few stories on our blog to get more information about our journey and adventures. <br></p>
@@ -17,7 +17,7 @@
       </div>
       <div class="part-container">
         <div class="no-mp align-vertical-centre row-odd w-row">
-          <div class="pl-10 pr-10 w-col w-col-3"><img src='<?php echo get_template_directory_uri() . "images/david.JPG" ?>' srcset='<?php echo get_template_directory_uri() . "/images/david-p-500.jpeg" ?> 500w, <?php echo get_template_directory_uri() . "/images/david-p-800.jpeg" ?> 800w, <?php echo get_template_directory_uri() . "/images/david-p-1080.jpeg" ?> 1080w, <?php echo get_template_directory_uri() . "/images/david.JPG" ?> 2605w' sizes="100vw" alt=""></div>
+          <div class="pl-10 pr-10 w-col w-col-3"><img src="http://localhost/vietnam_chronicles/wp-content/uploads/2020/04/front_page.david_.jpeg" alt="David"></div>
           <div class="pl-10 pr-10 w-col w-col-9">
             <h3 class="align-right">David Gabrić</h3>
             <p>David is a curious individual and an avid photographer seeking inspiration on a daily basis. After doing a motorbike trip around Vietnam, he found the new frontier for expanding his photography skillset. Also, he learned how to ride a bike for the first time in the chaotic Hanoi traffic. He enjoys Vietnamese food, and always fills up the plates with questionable amounts of chilli. When he travels, he gets in full flow mode, so he makes sure that he travels very often. Still has to learn how to ride a manual bike, and get an actual driving licence! Very shoddy at karaoke.<br></p>
@@ -29,10 +29,10 @@
       </div>
       <div class="part-container">
         <div class="no-mp align-vertical-centre w-row">
-          <div class="pl-10 pr-10 w-col w-col-3"><img src='<?php echo get_template_directory_uri() . "/images/lovel.JPG" ?>' srcset='<?php echo get_template_directory_uri() . "/images/lovel-p-500.jpeg" ?> 500w, <?php echo get_template_directory_uri() . "/images/lovel-p-800.jpeg" ?> 800w, <?php echo get_template_directory_uri() . "/images/lovel-p-1080.jpeg" ?> 1080w, <?php echo get_template_directory_uri() . "/images/lovel-p-1600.jpeg 1600w" ?>, <?php echo get_template_directory_uri() . "/images/lovel.JPG 1772w" ?>' sizes="100vw" alt=""></div>
+          <div class="pl-10 pr-10 w-col w-col-3"><img src="http://localhost/vietnam_chronicles/wp-content/uploads/2020/04/front_page.lovel_.jpeg" alt="Lovel"></div>
           <div class="w-col w-col-9">
             <h3 class="align-left">Lovel Mimica</h3>
-            <p>Lovel is digital enterprenuer, and an advanture lover. <br></p>
+            <p>Lovel is an softvare engineer, business owner and advanture lover who fell in love with Southeast Asia on first time he went there, and keep's on returning there as often as possible. While not busy in his agency he enjoys sports, history and mini trips trough his Croatian homeland, and rest of the European countries.<br></p>
           </div>
         </div>
       </div>

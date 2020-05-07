@@ -888,6 +888,7 @@ img {
   display: -ms-flexbox;
   display: flex;
   height: 100%;
+  width: 100%;
   min-height: 100%;
   padding-right: 10px;
   padding-left: 10px;
@@ -1353,7 +1354,6 @@ img {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  margin-top: -20px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
@@ -1954,6 +1954,7 @@ img {
   font-family: Montserrat, sans-serif;
   color: #fff;
   font-weight: 600;
+  transition: background-color 0.5s;
 }
 
 .link-header:hover {
@@ -3061,6 +3062,15 @@ img {
 
 .link-read-more.author-card {
   color: #575757;
+  text-decoration: none;
+}
+
+..link-read-more.author-card:hover{
+  text-decoration: none;
+}
+
+.author_name_link{
+  text-decoration: none;
 }
 
 .link-text {
@@ -3430,6 +3440,7 @@ img {
 .icon-arrow {
   margin-right: 10px;
   margin-left: 10px;
+  cursor: pointer;
 }
 
 .form-block-5 {
@@ -3823,10 +3834,6 @@ img {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-}
-
-.section-9 {
-  margin-top: 80px;
 }
 
 .search-form-heading {
@@ -4540,15 +4547,41 @@ img {
 }
 
 .navigation-submenu-vietnam{
-  display: none;
-  background-color: rgba(66, 143, 63, 0.38);
+  display: flex;
+  flex-direction: column;
   justify-content: center;
+  z-index: 100;
+}
+
+.navigation-submenu{
+  display: none;
+  justify-content: left;
+  position: fixed;
+  top: 65px;
+  z-index: 40;
+  width: 100%;
+  margin-left: 300px;
+  margin-right: auto;
+  justify-content: left;
+  align-items: flex-start;
+}
+
+.navigation-submenu-countries, .navigation-submenu-vietnam, .navigation-subsubmenu-destinations{
+  background-color: grey;
+  border: 0.5px solid white;
+}
+
+
+.navigation-submenu-countries{
+  display: flex;
+  flex-direction: column;
 }
 
 .navigation-subsubmenu-destinations{
-  display: none;
-  background-color: rgba(66, 143, 63, 0.18);
+  display: flex;
   justify-content: center;
+  flex-direction: column;
+  margin-top: 50px;
 }
 
 .submenu-item{
@@ -4560,6 +4593,13 @@ img {
 .country-link{
   color: black;
   text-decoration: none;
+  line-height: 30px;
+  font-size: 22px;
+  font-weight: 600;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 5px;
 }
 
 .header{
@@ -4589,6 +4629,7 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   box-shadow: 0 5px 10px 1px #000;
   position: sticky;
   top:0;
@@ -4618,13 +4659,6 @@ img {
   font-weight: 700;
 }
 
-.navigation-submenu-vietnam{
-  background-color:  #3e7243;
-}
-
-.navigation-subsubmenu-destinations{
-  background-color:  #2d5330;
-}
 
 .header_item-menu_icon{
   color: white;
@@ -4640,13 +4674,15 @@ img {
   background-color: rgb(182, 182, 182, 0.5);
 }
 
-@media (max-width: 1400px){
+.header_item-logo img{
+  max-height: 60px;
+  width: auto;
+}
+
+@media (max-width: 1280px){
   .header_item-logo{
     display: none;
   }
-}
-
-@media (max-width: 1200px){
   .header_item-nav_links{
     display: none;
   }
@@ -4697,9 +4733,6 @@ img {
   justify-content: flex-start;
 }
 
-.archive-post-card {
-  width: 33%;
-}
 
 .post_author_section{
   width: 100%;
@@ -4711,6 +4744,10 @@ img {
     font-size: 17px;
     line-height: 28px;
     text-align: left;
+}
+
+.archive-post-card .link-read-more{
+  text-align: center;
 }
 
 .single_post_content strong{
@@ -4869,6 +4906,12 @@ body{
   display: flex;
 }
 
+@media (max-width: 600px){
+  .tab_pane{
+    flex-direction: column;
+  }
+}
+
 .search_result_post_card{
   width: 100%;
 }
@@ -4993,4 +5036,121 @@ body{
   font-size: 1.2em;
   font-style: italic;
   margin: 0px 20px 20px 20px;
+}
+
+.category_image{
+  border-top-right-radius: 0px;
+  border-top-left-radius: 0px;
+}
+
+.link-sm{
+  text-decoration: none;
+}
+
+.link-sm:hover{
+  text-decoration: none;
+}
+
+.search_result_container{
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+}
+
+.postcard_grid{
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  width: 100%;
+}
+
+.search_results_item{
+  width: 100%!important;
+}
+
+@media (max-width: 800px){
+  .search_result_container{
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+  .postcard_grid{
+    grid-template-columns: 50% 50%;
+  }
+}
+
+@media (max-width: 500px){
+  .search_result_container{
+    display: grid;
+    grid-template-columns: 100%;
+  }
+
+  .postcard_grid{
+    grid-template-columns: 100%;
+  }
+}
+
+.slider_second-img{
+  display: none;
+}
+
+.postcard-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.icon-pinterest, .icon-facebook, .icon-instagram, .button-to-top, .search-icon{
+  cursor: pointer;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+@media (min-width:1000px){
+  .postcard_link{
+    display: none;
+  }
+  .postcard_animation{
+    display: static;
+  }
+}
+
+.postcard_link{
+  text-decoration: none;
+}
+
+.postcard_heading{
+  text-decoration: none;
+}
+
+.postcard_heading:hover{
+  text-decoration: none;
+}
+
+.image-postcard{
+  cursor: pointer;
+}
+
+@media (max-width:1000px) {
+  .postcard_link{
+    display: static;
+  }
+  .postcard_animation{
+    display: none;
+  }
+}
+
+h2{
+  font-weight: 600!important;
+}
+
+.expandable-item-vietnam{
+  cursor: pointer;
+}
+
+.submenu-item{
+  border-bottom: 1px solid white;
+  height: 50px;
+}
+
+.submenu-item:last-child{
+  border-bottom: none;
 }

@@ -1,24 +1,29 @@
   <?php get_header() ?>
     <div class="section-6 container-main main-section">
     <div class="container w-container">
-      <h1 class="heading-71 mds-plr-10 centered"><?php the_title(); ?></h1>
-      <div class="part-container"><img class="single_post_featured_image" src=<?php echo get_post_meta(get_post()->ID, 'featured_image')[0]; ?> srcset='<?php echo get_post_meta(get_post()->ID, 'featured_image')[0] ?> 800w, <?php echo get_post_meta(get_post()->ID, 'featured_image')[0] ?> 1278w"' sizes="100vw" alt="" class="image-6"></div>
+      <h1 class="heading-71 mds-plr-10 centered"><?php the_title(); ?></h1>       
+      <?php 
+        if(get_post_meta(get_post()->ID, 'featured_image')[0]): ?>
+          <div class="part-container"><img class="single_post_featured_image" src=<?php echo get_post_meta(get_post()->ID, 'featured_image')[0]; ?> srcset='<?php echo get_post_meta(get_post()->ID, 'featured_image')[0] ?> 800w, <?php echo get_post_meta(get_post()->ID, 'featured_image')[0] ?> 1278w"' sizes="100vw" alt="" class="image-6"></div>
+        <?php 
+        else: ?>
+          <div class="part-container">
+            <p><?php the_excerpt(); ?></p>
+          </div>
+      <?php
+        endif; ?>
       <div class="div-social-share-single">
         <div class="social-share-icons">
-          <div class="html-embed-8 icon-facebook w-embed"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></div>
-          <div class="html-embed-8 icon-twitter w-embed"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></div>
-          <div class="html-embed-8 icon-pinterest w-embed"><i class="fa fa-pinterest-p fa-2x" aria-hidden="true"></i></div>
+          <a href='http://facebook.com/sharer.php?u=https://vietnamchronicles.com/about' class="html-embed-8 icon-facebook w-embed"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a>
+          <a href='http://twitter.com/share.php?text=https://vietnamchronicles.com/about' class="html-embed-8 icon-twitter w-embed"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>
+          <a href='' class="html-embed-8 icon-pinterest w-embed"><i class="fa fa-pinterest-p fa-2x" aria-hidden="true"></i></a>
         </div>
       </div>
         <?php 
           $content = wpautop(get_post()->post_content); 
 
-  
           preg_match_all( '@<h2.*?>(.*?)<\/h2>@', $content, $matches );
           $tag = $matches[1];
-          //var_dump($ta g);
-
-          //echo $content;
         ?>
       <div class="table_of_contents">
         <h3>Table of Contents</h3>
@@ -51,9 +56,9 @@
             <?php echo get_avatar($author_id, 180); ?>
           </div>
           <div class="w-col w-col-9">
-            <h4 class="heading-39"><?php echo get_the_author_meta( 'first_name', $author_id ) . " " . get_the_author_meta( 'last_name', $author_id );  ?></h4>
+            <a class='author_name_link' href='http://localhost/vietnam_chronicles/author/<?php echo get_the_author_meta( 'user_nicename', $author_id ); ?>'><h4 class="heading-39"><?php echo get_the_author_meta( 'first_name', $author_id ) . " " . get_the_author_meta( 'last_name', $author_id );  ?></h4></a>
             <p class="paragraph-9"><?php echo get_the_author_meta( 'description', $author_id ); ?></p>
-            <p class="link-read-more author-card">Read more &gt;</p>
+            <a href='http://localhost/vietnam_chronicles/author/<?php echo get_the_author_meta( 'user_nicename', $author_id ); ?>' class="link-read-more author-card">Read more of this author</a>
           </div>
         </div>
       </div>

@@ -50,12 +50,6 @@
       <div class="div-block-4">
         <div class="text-block footer-text">Vietnam Chronicles. All rights reserved 2020</div>
         <div class="div-block-3">
-          <div class="w-embed">
-            <a href="https://www.facebook.com/vietnamchronicles/"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i>&nbsp</a>
-            <a href="https://www.instagram.com/vietnamchronicles/"><i class="fa fa-instagram fa-lg" aria-hidden="true"></i>&nbsp</a>
-            <a href="https://www.pinterest.com/vietnamchronicles/"><i class="fa fa-pinterest-square fa-lg" aria-hidden="true"></i></a>
-          </div>
-        </div>
       </div>
     </div>
   </div>

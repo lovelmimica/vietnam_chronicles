@@ -15,6 +15,9 @@ window.onload = function(){
         jQuery(".postcard-modal .modal-postcard-parts").text(postcard_parts);        
     });
     //try to use promises in form submiting
+    jQuery('.search-icon').on('click', () => {
+        jQuery('#search_form').submit();
+    });
     
     jQuery(".do-search-posts").on("click", function(){
         jQuery(".form-search-posts").ajaxSubmit();
@@ -86,7 +89,7 @@ window.onload = function(){
     function present_results(search_results, query){
         jQuery(".search_result_container").empty();
         for(i = 0; i < search_results.length; i++){
-            jQuery(".search_result_container").append(`<div class="cetered-vertical w-col w-col-4">
+            jQuery(".search_result_container").append(`<div class="cetered-vertical w-col w-col-4 search_results_item">
             <div class="archive-post-card p-10 search_result_post_card">
               <img src="http://localhost/vietnam_chronicles/wp-content/themes/vietnam_chronicles/images/post-card_dummy_00.jpg" width="300" alt="" class="link-image">
               <h4 class="link-heading">${search_results[i].title}</h4>
@@ -110,7 +113,7 @@ window.onload = function(){
     } 
     jQuery('#input_search_query').on('input', function(){
         let query = jQuery(this).val();
-        if( query.length >= 3 ) {
+        if( query.length >= 2 ) {
 
             jQuery.ajax({
                 url: "http://localhost/vietnam_chronicles/wp-json/vnc/v1/search-posts?query=" + query,       
@@ -135,22 +138,77 @@ window.onload = function(){
           jQuery(".ig_slider_left").on("click", function(){
             console.log("IG slider goes left");
             ig_image_urls.push(ig_image_urls.shift());
-            jQuery(".link-instagram-1").attr("src", ig_image_urls[5]);
-            jQuery(".link-instagram-2").attr("src", ig_image_urls[6]);
-            jQuery(".link-instagram-3").attr("src", ig_image_urls[7]);
-            
+            jQuery(".link-instagram-1").animate({opacity: 0});
+            jQuery(".link-instagram-2").animate({opacity: 0});
+            jQuery(".link-instagram-3").animate({opacity: 0});
+
+            setTimeout(()=>{
+                jQuery(".link-instagram-1").attr("src", ig_image_urls[5]);
+                jQuery(".link-instagram-2").attr("src", ig_image_urls[6]);
+                jQuery(".link-instagram-3").attr("src", ig_image_urls[7]);
+    
+                jQuery(".link-instagram-1").animate({opacity: 1});
+                jQuery(".link-instagram-2").animate({opacity: 1});
+                jQuery(".link-instagram-3").animate({opacity: 1});
+                }, 500
+            );
             });
   
           jQuery(".ig_slider_right").on("click", function(){
             console.log("IG slider goes right");
             ig_image_urls.unshift(ig_image_urls.pop());
-            jQuery(".link-instagram-1").attr("src", ig_image_urls[5]);
-            jQuery(".link-instagram-2").attr("src", ig_image_urls[6]);
-            jQuery(".link-instagram-3").attr("src", ig_image_urls[7]);
+            jQuery(".link-instagram-1").animate({opacity: 0});
+            jQuery(".link-instagram-2").animate({opacity: 0});
+            jQuery(".link-instagram-3").animate({opacity: 0});
+
+            setTimeout(()=>{
+                jQuery(".link-instagram-1").attr("src", ig_image_urls[5]);
+                jQuery(".link-instagram-2").attr("src", ig_image_urls[6]);
+                jQuery(".link-instagram-3").attr("src", ig_image_urls[7]);
+    
+                jQuery(".link-instagram-1").animate({opacity: 1});
+                jQuery(".link-instagram-2").animate({opacity: 1});
+                jQuery(".link-instagram-3").animate({opacity: 1});
+                }, 500
+            );
+          });
+
+          function sliderLeft(){
+            jQuery('.slider_prim-img').removeClass('w3-animate-left');
+            jQuery('.slider_second-img').removeClass('w3-animate-left');
+
+            jQuery('.slider_prim-img').addClass('w3-animate-right');
+            jQuery('.slider_second-img').addClass('w3-animate-right');
+
+            jQuery('.slider_prim-img').toggle();
+            jQuery('.slider_second-img').toggle();
+          }
+
+          function sliderRight(){
+            jQuery('.slider_prim-img').removeClass('w3-animate-right');
+            jQuery('.slider_second-img').removeClass('w3-animate-right');
+
+            jQuery('.slider_prim-img').addClass('w3-animate-left');
+            jQuery('.slider_second-img').addClass('w3-animate-left');
+
+            jQuery('.slider_prim-img').toggle();
+            jQuery('.slider_second-img').toggle();
+          }
+
+          jQuery('.slider-arrow.left').on('click', () => {
+            sliderLeft();
+          });
+
+          jQuery('.slider-arrow.right').on('click', () => {
+            sliderRight();
           });
 
           this.setInterval(function(){
               console.log("Changing main slider image");
+
+                sliderLeft();
+              //jQuery('.slider_second-img').addClass('w3-animate-right');
+
           }, 3000);
     }
 
@@ -186,6 +244,13 @@ window.onload = function(){
         jQuery(".navigation-subsubmenu-destinations").css("display", "none");
     });
 
+    jQuery(".expandable-item-countries").on('click', function(){
+        jQuery(".navigation-submenu").css("display", "flex");
+        //jQuery(".navigation-submenu").slideDown();
+        let position = jQuery(".expandable-item-countries").position();
+        jQuery(".navigation-submenu").css('margin-left', position.left)
+    });
+
     jQuery(".expandable-item-vietnam").hover(function(){
         jQuery(".navigation-submenu-vietnam").css("display", "flex");
     });
@@ -195,8 +260,7 @@ window.onload = function(){
     });
 
     jQuery(".main-section").mouseenter(function(){
-        jQuery(".navigation-submenu-vietnam").css("display", "none");
-        jQuery(".navigation-subsubmenu-destinations").css("display", "none");
+        jQuery(".navigation-submenu").css("display", "none");
     });
 
     jQuery(".expand-mobile-menu-vietnam").on('click', function(){
