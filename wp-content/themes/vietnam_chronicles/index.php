@@ -26,8 +26,8 @@
                 'featured_image' => $post->featured_image
             )
         );
-        wp_insert_post( $postarr ); 
+        //wp_insert_post( $postarr ); 
 
-        echo "<h1>Insertan novi post " . $post->title . "</h1>";
+        //echo "<h1>Insertan novi post " . $post->title . "</h1>";
     }
 ?>

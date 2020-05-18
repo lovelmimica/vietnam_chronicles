@@ -173,26 +173,46 @@ window.onload = function(){
             );
           });
 
+          let slider_counter = 3001;
+          let slider_images = ['http://localhost/vietnam_chronicles/wp-content/themes/vietnam_chronicles/images/slider_00.jpg', 'http://localhost/vietnam_chronicles/wp-content/themes/vietnam_chronicles/images/slider_01.jpg', 'http://localhost/vietnam_chronicles/wp-content/themes/vietnam_chronicles/images/slider_02.jpg'];
+          
           function sliderLeft(){
+            let current_image = slider_counter % 3;
+            slider_counter++;
+            let new_mage =  "<img class='w3-animate-right slider_image' src=" + slider_images[current_image] + " />";
+
+
             jQuery('.slider_prim-img').removeClass('w3-animate-left');
             jQuery('.slider_second-img').removeClass('w3-animate-left');
 
             jQuery('.slider_prim-img').addClass('w3-animate-right');
             jQuery('.slider_second-img').addClass('w3-animate-right');
 
-            jQuery('.slider_prim-img').toggle();
-            jQuery('.slider_second-img').toggle();
+            jQuery('.slider_image').remove();
+            jQuery('.slider_image-wrapper').append(new_mage);
+
+            //jQuery('.slider_prim-img').toggle();
+            //jQuery('.slider_second-img').toggle();
           }
 
           function sliderRight(){
+            let current_image = slider_counter % 3;
+            slider_counter--;
+            let new_mage =  "<img class='w3-animate-right slider_image' src=" + slider_images[current_image] + " />";
+
             jQuery('.slider_prim-img').removeClass('w3-animate-right');
             jQuery('.slider_second-img').removeClass('w3-animate-right');
 
             jQuery('.slider_prim-img').addClass('w3-animate-left');
             jQuery('.slider_second-img').addClass('w3-animate-left');
 
+            jQuery('.slider_image').remove();
+            jQuery('.slider_image-wrapper').append(new_mage);
+
+            /*
             jQuery('.slider_prim-img').toggle();
             jQuery('.slider_second-img').toggle();
+            */
           }
 
           jQuery('.slider-arrow.left').on('click', () => {
@@ -214,6 +234,14 @@ window.onload = function(){
 
     if(jQuery("meta[name='single'").attr("content")){
         console.log("Single post is loaded");
+        jQuery('.content_link').each( (i, obj) => {
+            let heading = jQuery(obj).text();
+            let position = jQuery('.single_post_content h2:contains(' + heading + ')').position().top;
+            let content_position = jQuery('.single_post_content').position().top;
+            jQuery(obj).on('click', () => {
+                window.scrollTo(0, content_position + position - 50);
+            });
+        });
         jQuery(window).scroll(function(){
             if(jQuery(window).scrollTop() > 300) {
                 console.log("Showing to top button");
@@ -240,15 +268,18 @@ window.onload = function(){
             jQuery(".navigation-menu").hide();
         };
 
+        jQuery(".navigation-submenu-countries").css("display", "none");
         jQuery(".navigation-submenu-vietnam").css("display", "none");
         jQuery(".navigation-subsubmenu-destinations").css("display", "none");
     });
 
-    jQuery(".expandable-item-countries").on('click', function(){
-        jQuery(".navigation-submenu").css("display", "flex");
-        //jQuery(".navigation-submenu").slideDown();
+    jQuery(".expandable-item-countries").hover( function(){
+        console.log("Expand start");
         let position = jQuery(".expandable-item-countries").position();
-        jQuery(".navigation-submenu").css('margin-left', position.left)
+        jQuery(".navigation-submenu").css('margin-left', position.left);
+        jQuery(".navigation-submenu-countries").css("display", "flex");
+        console.log("Expand end");
+        //jQuery(".navigation-submenu").slideDown();
     });
 
     jQuery(".expandable-item-vietnam").hover(function(){
@@ -259,12 +290,13 @@ window.onload = function(){
         jQuery(".navigation-subsubmenu-destinations").css("display", "flex");
     });
 
-    jQuery(".main-section").mouseenter(function(){
+    /*jQuery(".main-section").mouseenter(function(){
         jQuery(".navigation-submenu").css("display", "none");
-    });
+    });*/
 
     jQuery(".expand-mobile-menu-vietnam").on('click', function(){
         jQuery(".menu-subitem").toggleClass("hidden");
+        jQuery(".menu-subsubitem").addClass("hidden");
     });
 
     jQuery(".expand-mobile-menu-vietnam-dest").on('click', function(){
@@ -273,6 +305,14 @@ window.onload = function(){
 
     jQuery(".header_item-menu_icon").on('click', function(){
         jQuery(".mobile-navigation-menu").toggleClass("hidden");
+        jQuery(".menu-subitem").addClass("hidden");
+        jQuery(".menu-subsubitem").addClass("hidden");
     });
 
+    jQuery('.button_expand-content').on('click', () => {
+        jQuery('.button_expand-content').toggleClass('fa-plus');
+        jQuery('.button_expand-content').toggleClass('fa-minus');
+
+        jQuery('.table_of_contents-body').slideToggle();
+    });
 }

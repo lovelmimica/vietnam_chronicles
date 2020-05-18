@@ -2,14 +2,14 @@
   <div class="container-main main-section">
     <div class="w-container">
       <div class="div-block-7"><img class='category_image' src=<?php echo get_template_directory_uri() . "/images/post_big_dummy.jpg" ?> width="1062" srcset='<?php echo get_template_directory_uri() . "/images/post_big_dummy-p-500.jpeg" ?> 500w, <?php echo get_template_directory_uri() . "/images/post_big_dummy.jpg" ?> 789w'' sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px" alt="" class="image">
-        <h2 class="heading-blog">Blog</h2>
+        <h2 class="heading-blog"><?php single_cat_title() ?></h2>
       </div>
-      <p class="mds-plr-10">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</p>
+      <p class="mds-plr-10"><?php echo category_description()?></p>
       <div class="html-embed-5 w-embed">
         <hr>
       </div>
       <?php 
-        $args =array('post_type' => 'post');
+        $args =array('post_type' => 'post', 'cat' => the_category_ID(false) );
         $loop = new WP_Query( $args );
         ?>
         <div class='postcard_grid'>
@@ -18,10 +18,11 @@
           $loop->the_post();
           ?>
           <div class="archive-post-card p-10">
+            <a href=<?php the_permalink() ?>>
             <img src='<?php echo get_template_directory_uri() . "/images/post-card_dummy_00.jpg" ?>' width="300" alt="" class="link-image">
-            <h4 class="link-heading"><?php the_title() ?></h4>
+            <h4 class="link-heading"><?php the_title() ?></h4></a>
             <p><?php the_excerpt() ?></p>
-            <p class="link-read-more">Read more &gt;</p>
+            <a href=<?php the_permalink() ?> class="link-read-more">Read more &gt;</a>
           </div>
         <?php         
         endwhile;

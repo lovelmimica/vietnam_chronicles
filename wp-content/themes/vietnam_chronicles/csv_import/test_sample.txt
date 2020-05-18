@@ -1,0 +1,3 @@
+csv_post_title,csv_post_type,csv_post_excerpt,csv_post_tags,csv_post_date,featured_image
+A Guide to Vietnamese Drip Coffee,post,This is an excerpt for a CSV Importer test post.,"test,csv",2000-12-31 20:00:12,https://vietnamchronicles.com/wp-content/uploads/2020/04/siem-reap-to-battambang-1-1280x640.jpg?189db0&189db0
+A Guide to Vietnamese Drip Coffee,post,This is an excerpt for a CSV Importer test post.,"test,csv",2000-12-31 20:00:12,https://vietnamchronicles.com/wp-content/uploads/2020/04/siem-reap-to-battambang-1-1280x640.jpg?189db0&189db0

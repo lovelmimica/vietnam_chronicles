@@ -4,19 +4,24 @@
         <div class="w-col w-col-6">
           <div class="w-row">
             <div class="column w-col w-col-4">
-              <h4 class="white-text">INFO</h4><a href="http://localhost/vietnam_chronicles/about-us/" class="link">About Us</a><a href="http://localhost/vietnam_chronicles/privacy-policy/" class="link">Privacy Policy</a><a href="http://localhost/vietnam_chronicles/work-with-us/" class="link">Work With Us</a><a href="http://localhost/vietnam_chronicles/contact-us/" class="link">Contact Us</a></div>
-            <div class="w-col w-col-4">
-              <h4 class="white-text">EXPLORE</h4>
-              <a href="http://localhost/vietnam_chronicles/category/vietnam/culture/" class="link">Vietnam Culture</a>
-              <a href="http://localhost/vietnam_chronicles/category/vietnam/vietnam-destinations/" class="link">Vietnam Destinations</a>
-              <a href="http://localhost/vietnam_chronicles/category/vietnam/vietnam-living/" class="link">Living in Vietnam</a>
-              <a href="http://localhost/vietnam_chronicles/category/vietnam/vietnam-travel-tips/" class="link">Vietnam Travel Tips</a>
+              <h4 class="white-text">INFO</h4>
+              <a href="http://localhost/vietnam_chronicles/about-us/" class="link">About Us</a>
+              <a href="http://localhost/vietnam_chronicles/privacy-policy/" class="link">Privacy Policy</a>
+              <a href="http://localhost/vietnam_chronicles/work-with-us/" class="link">Work With Us</a>
+              <a href="http://localhost/vietnam_chronicles/contact-us/" class="link">Contact Us</a>
             </div>
             <div class="w-col w-col-4">
               <h4 class="white-text">DESTINATIONS</h4>
               <a href="http://localhost/vietnam_chronicles/category/laos/" class="link">Laos</a>
               <a href="http://localhost/vietnam_chronicles/category/vietnam/" class="link">Vietnam</a>
               <a href="http://localhost/vietnam_chronicles/category/cambodia/" class="link">Cambodia</a>
+            </div>
+            <div class="w-col w-col-4">
+              <h4 class="white-text">EXPLORE</h4>
+              <a href="http://localhost/vietnam_chronicles/category/vietnam/culture/" class="link">Vietnam Culture</a>
+              <a href="http://localhost/vietnam_chronicles/category/vietnam/vietnam-destinations/" class="link">Vietnam Destinations</a>
+              <a href="http://localhost/vietnam_chronicles/category/vietnam/vietnam-living/" class="link">Living in Vietnam</a>
+              <a href="http://localhost/vietnam_chronicles/category/vietnam/vietnam-travel-tips/" class="link">Vietnam Travel Tips</a>
             </div>
           </div>
         </div>

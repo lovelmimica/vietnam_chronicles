@@ -2993,7 +2993,7 @@ img {
 }
 
 .pl-10 {
-  padding-right: 0px;
+  padding-left: 10px;
 }
 
 .pl-10.pr-10 {
@@ -4349,9 +4349,9 @@ img {
   .social-share-icons {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
   }
   .html-embed-8.icon-facebook {
     margin-top: 5px;
@@ -4554,7 +4554,7 @@ img {
 }
 
 .navigation-submenu{
-  display: none;
+  display: flex;
   justify-content: left;
   position: fixed;
   top: 65px;
@@ -4567,18 +4567,19 @@ img {
 }
 
 .navigation-submenu-countries, .navigation-submenu-vietnam, .navigation-subsubmenu-destinations{
+  display: none;
   background-color: grey;
   border: 0.5px solid white;
 }
 
 
 .navigation-submenu-countries{
-  display: flex;
+  display: none;
   flex-direction: column;
 }
 
 .navigation-subsubmenu-destinations{
-  display: flex;
+  display: none;
   justify-content: center;
   flex-direction: column;
   margin-top: 50px;
@@ -4693,7 +4694,7 @@ img {
 
 .mobile-navigation-menu{
   background-color: #18381c;
-  width: auto;
+  width: 100%;
   padding-left: 10px;
 }
 
@@ -4748,6 +4749,12 @@ img {
 
 .archive-post-card .link-read-more{
   text-align: center;
+}
+
+.archive-post-card a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .single_post_content strong{
@@ -4968,6 +4975,13 @@ body{
   text-align: justify;
   margin-top: 10px;
   margin-bottom: 10px;
+  padding-top: 20px;
+  padding-left: 80px;
+}
+
+.single_post_info_box .fa-exclamation-circle{
+  position: absolute;
+  left: 40px;
 }
 
 .single_post_content .btn-container{
@@ -5027,8 +5041,7 @@ body{
 
 .table_of_contents h3{
   margin-top: 10px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid white;
+  padding-bottom: 0px;
 }
 
 .single_post_content .image_description{
@@ -5153,4 +5166,46 @@ h2{
 
 .submenu-item:last-child{
   border-bottom: none;
+}
+
+.single_post_content blockquote{
+  text-align: center;
+  border-left: none;
+}
+
+.single_post_content img{
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+.archive-post-card a{
+  text-decoration: none;
+}
+
+.expandable-item-countries{
+  cursor: pointer;
+}
+
+.table_of_contents-heading{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid white;
+  margin-bottom: 10px;
+}
+
+.button_expand-content{
+  cursor: pointer;
+}
+
+.table_of_contents-body{
+  display: none;
+}
+
+.team_member-link{
+  text-decoration: none;
+}
+
+.team_member-link:hover{
+  text-decoration: underline;
 }

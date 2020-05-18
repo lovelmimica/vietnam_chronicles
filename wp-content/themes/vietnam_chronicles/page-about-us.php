@@ -7,7 +7,7 @@
         <div class="no-mp align-vertical-centre w-row">
           <div class="pl-10 pl-10 pr-10 w-col w-col-3"><img src="http://localhost/vietnam_chronicles/wp-content/uploads/2020/04/front_page.Antonio.jpeg" alt="Antonio"></div>
           <div class="pl-10 pr-10 w-col w-col-9">
-            <h3 class="align-left">Antonio Gabrić</h3>
+          <a class='team_member-link' href='http://localhost/vietnam_chronicles/author/antonio/'><h3 class="align-left">Antonio Gabrić</h3></a>
             <p>Antonio is a long-term traveler with a deep passion in exploring off-the-beaten-paths around the world. Currently, he’s living in Da Nang city and when he’s not busy pushing the new content, he enjoys taking his motorbike around Vietnam or Laos. Some of the most remarkable experiences were teaching English in a remote village located in central Laos countryside, Nakai town. Or, living in a rural Nghe An Province while helping a local community with their English. Or, driving with the worst ‘Honda’ Win around the country experiencing daily breakdowns. Or, just read a few stories on our blog to get more information about our journey and adventures. <br></p>
           </div>
         </div>
@@ -19,7 +19,7 @@
         <div class="no-mp align-vertical-centre row-odd w-row">
           <div class="pl-10 pr-10 w-col w-col-3"><img src="http://localhost/vietnam_chronicles/wp-content/uploads/2020/04/front_page.david_.jpeg" alt="David"></div>
           <div class="pl-10 pr-10 w-col w-col-9">
-            <h3 class="align-right">David Gabrić</h3>
+            <a class='team_member-link' href='http://localhost/vietnam_chronicles/author/david/'><h3 class="align-right">David Gabrić</h3></a>
             <p>David is a curious individual and an avid photographer seeking inspiration on a daily basis. After doing a motorbike trip around Vietnam, he found the new frontier for expanding his photography skillset. Also, he learned how to ride a bike for the first time in the chaotic Hanoi traffic. He enjoys Vietnamese food, and always fills up the plates with questionable amounts of chilli. When he travels, he gets in full flow mode, so he makes sure that he travels very often. Still has to learn how to ride a manual bike, and get an actual driving licence! Very shoddy at karaoke.<br></p>
           </div>
         </div>

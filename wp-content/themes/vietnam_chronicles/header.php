@@ -36,7 +36,7 @@
         <div class="header_item header_item-sm_icons">
           <a href="https://www.facebook.com/vietnamchronicles/" class="link-sm link-header w-embed"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
           <a href="https://www.instagram.com/vietnamchronicles/" class="link-sm link-header w-embed"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a>
-          <a href="https://www.pinterest.com/vietnamchronicles/" class="link-sm link-header w-embed"><i class="fa fa-pinterest-square fa-2x" aria-hidden="true"></i></a>
+          <!--<a href="https://www.pinterest.com/vietnamchronicles/" class="link-sm link-header w-embed"><i class="fa fa-pinterest-square fa-2x" aria-hidden="true"></i></a>-->
         </div>
         <form name="email-form-3" id="search_form" data-name="Email Form 3" class="header_item header_item-search_form" method="GET" action="http://localhost/vietnam_chronicles/search-results/">
               <input type="text" class="search-posts search-box w-input" maxlength="256" name="query" data-name="Email 2" placeholder="Search..." id="email-2" required="">
@@ -46,34 +46,34 @@
         </form>
     </div>
     <div class="mobile-navigation-menu hidden">
-      <span class="menu-item"><a href="http://localhost/vietnam_chronicles/category/vietnam/">VIETNAM </a><span class="expand-mobile-menu expand-mobile-menu-vietnam"><i class="fa fa-caret-down" aria-hidden="true"></i></span></span>
-      <span class="menu-item menu-subitem hidden"><a href="http://localhost/vietnam_chronicles/category/vietnam/culture/" ><i class="fa fa-angle-double-right" aria-hidden="true"></i>&nbsp;</i>VIETNAM CULTURE</a></span>
-      <span class="menu-item menu-subitem hidden"><a href="http://localhost/vietnam_chronicles/category/vietnam/vietnam-destinations/"  ><i class="fa fa-angle-double-right" aria-hidden="true"></i>&nbsp;VIETNAM DESTINATIONS</a> <span class="expand-mobile-menu expand-mobile-menu-vietnam-dest"><i class="fa fa-caret-down" aria-hidden="true"></i></span></span>
-      <span class="menu-item menu-subsubitem hidden"><a href="http://localhost/vietnam_chronicles/category/vietnam/vietnam-destinations/north-vietnam/" ></a><i class="fa fa-angle-double-right" aria-hidden="true"></i><i class="fa fa-angle-double-right" aria-hidden="true"></i>&nbsp;NORTH VIETNAM</span>
-      <span class="menu-item menu-subsubitem hidden"><a href="http://localhost/vietnam_chronicles/category/vietnam/vietnam-destinations/central-vietnam/" ></a><i class="fa fa-angle-double-right" aria-hidden="true"></i><i class="fa fa-angle-double-right" aria-hidden="true"></i>&nbsp;NORTH VIETNAM</span>
-      <span class="menu-item menu-subsubitem hidden"><a href="http://localhost/vietnam_chronicles/category/vietnam/vietnam-destinations/south-vietnam/" ></a><i class="fa fa-angle-double-right" aria-hidden="true"></i><i class="fa fa-angle-double-right" aria-hidden="true"></i>&nbsp;NORTH VIETNAM</span>
-      <span class="menu-item menu-subitem hidden"><a href="http://localhost/vietnam_chronicles/category/vietnam/vietnam-living/" ></a><i class="fa fa-angle-double-right" aria-hidden="true"></i>&nbsp;LIVING IN VIETNAM</span>
-      <span class="menu-item menu-subitem hidden"><a href="http://localhost/vietnam_chronicles/category/vietnam/vietnam-travel-tips/" ></a><i class="fa fa-angle-double-right" aria-hidden="true"></i>&nbsp;VIETNAM TRAVEL TIPS</span>
-      <span class="menu-item"><a href="http://localhost/vietnam_chronicles/category/our-journeys/">OUR JOURNEYS</a></span>
-      <span class="menu-item"><a href="http://localhost/vietnam_chronicles/postcard/">POSTCARDS</a></span>
-      <span class="menu-item"><a href="http://localhost/vietnam_chronicles/about-us/">ABOUT US</a></span>
-      <span class="menu-item"><a href="http://localhost/vietnam_chronicles/work-with-us/">WORK WITH US</a></span>
+      <span class="menu-item w3-animate-left"><a href="http://localhost/vietnam_chronicles/category/vietnam/">VIETNAM </a><span class="expand-mobile-menu expand-mobile-menu-vietnam"><i class="fa fa-caret-down" aria-hidden="true"></i></span></span>
+      <span class="menu-item menu-subitem hidden w3-animate-left"><a href="http://localhost/vietnam_chronicles/category/vietnam/culture/" ><i class="fa fa-angle-double-right" aria-hidden="true"></i>&nbsp;</i>VIETNAM CULTURE</a></span>
+      <span class="menu-item menu-subitem hidden w3-animate-left"><a href="http://localhost/vietnam_chronicles/category/vietnam/vietnam-destinations/"  ><i class="fa fa-angle-double-right" aria-hidden="true"></i>&nbsp;VIETNAM DESTINATIONS</a> <span class="expand-mobile-menu expand-mobile-menu-vietnam-dest"><i class="fa fa-caret-down" aria-hidden="true"></i></span></span>
+      <span class="menu-item menu-subsubitem hidden w3-animate-left"><a href="http://localhost/vietnam_chronicles/category/vietnam/vietnam-destinations/north-vietnam/" ></a><i class="fa fa-angle-double-right" aria-hidden="true"></i><i class="fa fa-angle-double-right" aria-hidden="true"></i>&nbsp;NORTH VIETNAM</span>
+      <span class="menu-item menu-subsubitem hidden w3-animate-left"><a href="http://localhost/vietnam_chronicles/category/vietnam/vietnam-destinations/central-vietnam/" ></a><i class="fa fa-angle-double-right" aria-hidden="true"></i><i class="fa fa-angle-double-right" aria-hidden="true"></i>&nbsp;NORTH VIETNAM</span>
+      <span class="menu-item menu-subsubitem hidden w3-animate-left"><a href="http://localhost/vietnam_chronicles/category/vietnam/vietnam-destinations/south-vietnam/" ></a><i class="fa fa-angle-double-right" aria-hidden="true"></i><i class="fa fa-angle-double-right" aria-hidden="true"></i>&nbsp;NORTH VIETNAM</span>
+      <span class="menu-item menu-subitem hidden w3-animate-left"><a href="http://localhost/vietnam_chronicles/category/vietnam/vietnam-living/" ></a><i class="fa fa-angle-double-right" aria-hidden="true"></i>&nbsp;LIVING IN VIETNAM</span>
+      <span class="menu-item menu-subitem hidden w3-animate-left"><a href="http://localhost/vietnam_chronicles/category/vietnam/vietnam-travel-tips/" ></a><i class="fa fa-angle-double-right" aria-hidden="true"></i>&nbsp;VIETNAM TRAVEL TIPS</span>
+      <span class="menu-item w3-animate-left"><a href="http://localhost/vietnam_chronicles/category/our-journeys/">OUR JOURNEYS</a></span>
+      <span class="menu-item w3-animate-left"><a href="http://localhost/vietnam_chronicles/postcard/">POSTCARDS</a></span>
+      <span class="menu-item w3-animate-left"><a href="http://localhost/vietnam_chronicles/about-us/">ABOUT US</a></span>
+      <span class="menu-item w3-animate-left"><a href="http://localhost/vietnam_chronicles/work-with-us/">WORK WITH US</a></span>
     </div>
   </section>
 
-  <div class=navigation-submenu hidden>
-    <div class="navigation-submenu-countries">  
+  <div class=navigation-submenu>
+    <div class="navigation-submenu-countries w3-animate-top">  
       <a href="http://localhost/vietnam_chronicles/category/vietnam/" class="submenu-item link-header expandable-item-vietnam">VIETNAM &nbsp;<i class="fa fa-caret-down" aria-hidden="true"></i></a>
       <a href="http://localhost/vietnam_chronicles/category/laos/" class="submenu-item link-header">LAOS</a>
       <a href="http://localhost/vietnam_chronicles/category/cambodia/" class="submenu-item link-header">CAMBODIA</a>
     </div>
-    <div class="navigation-submenu-vietnam">
+    <div class="navigation-submenu-vietnam w3-animate-top">
       <a href="http://localhost/vietnam_chronicles/category/vietnam/culture/" class="submenu-item link-header">VIETNAM CULTURE</a>
       <a href="http://localhost/vietnam_chronicles/category/vietnam/vietnam-destinations/" class="submenu-item link-header expandable-item-destinations">VIETNAM DESTINATIONS &nbsp;<i class="fa fa-caret-down" aria-hidden="true"></i></a>
       <a href="http://localhost/vietnam_chronicles/category/vietnam/vietnam-living/" class="submenu-item link-header">LIVING IN VIETNAM</a>
       <a href="http://localhost/vietnam_chronicles/category/vietnam/vietnam-travel-tips/" class="submenu-item link-header">VIETNAM TRAVEL TIPS</a>
     </div>
-    <div class="navigation-subsubmenu-destinations">
+    <div class="navigation-subsubmenu-destinations w3-animate-left">
       <a href="http://localhost/vietnam_chronicles/category/vietnam/vietnam-destinations/north-vietnam/" class="submenu-item link-header">NORTH VIETNAM</a>
       <a href="http://localhost/vietnam_chronicles/category/vietnam/vietnam-destinations/central-vietnam/" class="submenu-item link-header">CENTRAL VIETNAM</a>
       <a href="http://localhost/vietnam_chronicles/category/vietnam/vietnam-destinations/south-vietnam/" class="submenu-item link-header">SOUTH VIETNAM</a>

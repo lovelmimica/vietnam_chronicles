@@ -3,10 +3,13 @@
     <div class="slider-arrow left">
       <div class="icon-arrow w-embed main_slider_left"><i class="fa fa-angle-left fa-3x" aria-hidden="true"></i></div>
     </div>
+    <div class='slider_image-wrapper'>
       <!--<img src=<?php echo get_template_directory_uri() . "/images/89027829_226427551874641_2734196362684923904_n.jpg" ?> srcset='<?php echo get_template_directory_uri() . "/images/89027829_226427551874641_2734196362684923904_n.jpg" ?> 500w, <?php echo get_template_directory_uri() . "/images/89027829_226427551874641_2734196362684923904_n.jpg" ?> 800w, <?php echo get_template_directory_uri() . "/images/89027829_226427551874641_2734196362684923904_n.jpg" ?> 1080w, <?php echo get_template_directory_uri() . "/images/89027829_226427551874641_2734196362684923904_n.jpg" ?> 2048w"' sizes="(max-width: 2048px) 100vw, 2048px" alt="" class="slider-image" />-->
-      <img class='w3-animate-right slider_prim-img' src='http://localhost/vietnam_chronicles/wp-content/uploads/2020/04/slider_image_01.jpg' />
-      <img class='w3-animate-right slider_second-img' src='http://localhost/vietnam_chronicles/wp-content/uploads/2020/04/slider_image_dummy.png' />
-    <div class="slider-arrow right ">
+      <!--<img class='w3-animate-right slider_prim-img' src='http://localhost/vietnam_chronicles/wp-content/themes/vietnam_chronicles/images/slider_00.jpg' />
+      <img class='w3-animate-right slider_second-img' src='http://localhost/vietnam_chronicles/wp-content/themes/vietnam_chronicles/images/slider_01.jpg' />-->
+      <img class='w3-animate-right slider_image' src='http://localhost/vietnam_chronicles/wp-content/themes/vietnam_chronicles/images/slider_00.jpg' />
+    </div>
+      <div class="slider-arrow right ">
       <div class="icon-arrow w-embed main_slider_right"><i class="fa fa-angle-right fa-3x" aria-hidden="true"></i></div>
     </div>
   </div>
@@ -50,17 +53,17 @@
             <div data-w-tab="latest" class="w-tab-pane w--tab-active">
               <div class='tab-pane-destinations tab_pane'>
             <?php 
-              $args =array('post_type' => 'post');
+              $args =array('post_type' => 'post', 'orderby' => 'publish_date', 'order' => 'DESC');
               $loop = new WP_Query( $args );
               $i = 0;
               while( $loop->have_posts() && $i < 3 ):
                 $loop->the_post();
                 ?>
                 <div class="archive-post-card p-10">
-                  <a href='<?php echo get_permalink(); ?>' ><img src='<?php echo get_template_directory_uri() . "/images/post-card_dummy_00.jpg" ?>' width="300" alt="" class="link-image"></a>
-                  <h4 class="link-heading"><?php the_title() ?></h4>
+                  <a href='<?php echo get_permalink(); ?>' ><img src='<?php echo get_template_directory_uri() . "/images/post-card_dummy_00.jpg" ?>' width="300" alt="" class="link-image">
+                  <h4 class="link-heading"><?php the_title() ?></h4></a>
                   <p><?php the_excerpt() ?></p>
-                  <p class="link-read-more">Read more &gt;</p>
+                  <a href=<?php the_permalink() ?> class="link-read-more">Read more &gt;</a>
                 </div>
             <?php 
                 $i++;
@@ -78,10 +81,10 @@
                 $loop->the_post();
                 ?>
                 <div class="archive-post-card p-10">
-                  <img src='<?php echo get_template_directory_uri() . "/images/post-card_dummy_00.jpg" ?>' width="300" alt="" class="link-image">
-                  <h4 class="link-heading"><?php the_title() ?></h4>
+                <a href=<?php the_permalink() ?>><img src='<?php echo get_template_directory_uri() . "/images/post-card_dummy_00.jpg" ?>' width="300" alt="" class="link-image">
+                  <h4 class="link-heading"><?php the_title() ?></h4></a>
                   <p><?php the_excerpt() ?></p>
-                  <p class="link-read-more">Read more &gt;</p>
+                  <a href=<?php the_permalink() ?> class="link-read-more">Read more &gt;</a>
                 </div>
             <?php 
                 $i++;
@@ -99,10 +102,10 @@
                 $loop->the_post();
                 ?>
                 <div class="archive-post-card p-10">
-                  <img src='<?php echo get_template_directory_uri() . "/images/post-card_dummy_00.jpg" ?>' width="300" alt="" class="link-image">
-                  <h4 class="link-heading"><?php the_title() ?></h4>
+                  <a href=<?php the_permalink() ?>><img src='<?php echo get_template_directory_uri() . "/images/post-card_dummy_00.jpg" ?>' width="300" alt="" class="link-image">
+                  <h4 class="link-heading"><?php the_title() ?></h4></a>s
                   <p><?php the_excerpt() ?></p>
-                  <p class="link-read-more">Read more &gt;</p>
+                  <a href=<?php the_permalink() ?> class="link-read-more">Read more &gt;</a>
                 </div>
             <?php 
                 $i++;

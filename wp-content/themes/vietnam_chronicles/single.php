@@ -16,7 +16,7 @@
         <div class="social-share-icons">
           <a href='http://facebook.com/sharer.php?u=https://vietnamchronicles.com/about' class="html-embed-8 icon-facebook w-embed"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a>
           <a href='http://twitter.com/share.php?text=https://vietnamchronicles.com/about' class="html-embed-8 icon-twitter w-embed"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>
-          <a href='' class="html-embed-8 icon-pinterest w-embed"><i class="fa fa-pinterest-p fa-2x" aria-hidden="true"></i></a>
+          <!--<a href='' class="html-embed-8 icon-pinterest w-embed"><i class="fa fa-pinterest-p fa-2x" aria-hidden="true"></i></a>-->
         </div>
       </div>
         <?php 
@@ -25,17 +25,20 @@
           preg_match_all( '@<h2.*?>(.*?)<\/h2>@', $content, $matches );
           $tag = $matches[1];
         ?>
-      <div class="table_of_contents">
-        <h3>Table of Contents</h3>
-        <ol>
+      <div class="table_of_contents pl-10 pr-10">
+        <div class='table_of_contents-heading'>
+          <h3>Table of Contents</h3>
+          <i class="button_expand-content fa fa-plus fa-lg" aria-hidden="true"></i>
+        </div>
+        <ol class='table_of_contents-body'>
         <?php 
           foreach($tag as $heading):
-            echo "<li><a>". $heading . "</a></li>";
+            echo "<li><a class='content_link'>". strip_tags( $heading ) . "</a></li>";
           endforeach;
         ?>
         </ol>
       </div>  
-      <div class="part-container single_post_content">
+      <div class="part-container single_post_content pl-10 pr-10">
         <?php 
           echo $content;
         ?>
@@ -62,7 +65,6 @@
           </div>
         </div>
       </div>
-
       <h3 class="heading-12">Write Comment</h3>
       <div class="part-container">
         <div class="form-block-4 w-form">
@@ -93,8 +95,8 @@
         <hr>
       </div>
       <?php 
-        $args = array( 'post_id' => get_the_ID() );
-        $comments = get_comments( $args );
+        //$args = array( 'post_id' => get_the_ID() );
+        $comments = get_approved_comments( get_the_ID() );
       ?>
       <h3 class="heading-12"><?php if($comments) echo count( $comments ) . " comments"; else echo "No comments so far" ?></h3>
       
@@ -113,7 +115,7 @@
         <div class="no-mp w-row">
           <div class="p-10 w-col w-col-9">
             <h4 class="align-left link-heading"><?php echo $comment->comment_author ?></h4>
-            <p class="paragraph-16"><?php echo $comment->comment_date; ?></p>
+            <!--<p class="paragraph-16"><?php echo $comment->comment_date; ?></p>-->
             <p class="paragraph-16"><?php echo $comment->comment_content; ?> </p>
           </div>
         </div>
@@ -129,7 +131,7 @@
                   </div>
                   <div class="p-10 w-col w-col-9">
                     <h4 class="align-left link-heading">Reply from <?php echo $reply->comment_author ?></h4>
-                    <p class="paragraph-16"><?php echo $reply->comment_date; ?></p>
+                    <!--<p class="paragraph-16"><?php echo $reply->comment_date; ?></p>-->
                     <p class="paragraph-16"><?php echo $reply->comment_content; ?> </p>
                   </div>
                 </div>
